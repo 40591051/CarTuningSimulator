@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Car Tuning Simulator</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="icon" type="image/png" href="cts.png">
+</head>
+<body>
+    <header>
+        <h1>Car Tuning Simulator</h1>
+        <nav>
+            <ul>
+                <!-- Navigation Links -->
+                <li><a href="#home">Home</a></li>
+                <li><a href="#select-car">Car Selection</a></li>
+                <li><a href="#customize">Customization</a></li>
+                <li><a href="#learn">Educational Content</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main>
+        <!-- Welcome Section -->
+        <section id="home">
+            <h2>Welcome to the Car Tuning Simulator</h2>
+            <p>Choose a car and start customizing it to see how modifications affect its performance.</p>
+        </section>
+
+        <!-- Car Selection Section -->
+        <section id="select-car">
+            <h2>Select Your Car</h2>
+            <div id="car-and-stats">
+                <!-- Stat Bars for Car Stats -->
+                <div id="stat-bar-container">
+                    <div id="stat-bar">
+                        <div class="stat">
+                            <p>Horsepower: <span id="hp">300</span> HP</p>
+                            <div class="bar" id="hp-bar"></div>
+                        </div>
+                        <div class="stat">
+                            <p>Weight: <span id="weight">1200</span> kg</p>
+                            <div class="bar" id="weight-bar"></div>
+                        </div>
+                        <div class="stat">
+                            <p>Grip: <span id="grip">1.2</span> G</p>
+                            <div class="bar" id="grip-bar"></div>
+                        </div>
+                    </div>
+                </div>
+                 <!-- Car Selector Controls -->
+                <div id="car-selector">
+                    <button id="prev-car" onclick="changeCar(-1)">❮</button>
+                    <img id="car-image" src="senna.png" alt="Selected Car" width="300">
+                    <button id="next-car" onclick="changeCar(1)">❯</button>
+                </div>
+            </div>
+        </section>
+        
+        <!-- Customization Section -->
+        <h2>Customize Your Car</h2>
+        <p>Modify aspects of your car and see real-time stats on performance changes.</p>
+        <section id="customize">       
+            <div class="modification">
+                <img src="turbo.png" alt="Turbo" class="mod-image">
+                <button id="add-turbo" class="mod-button" onclick="addTurbo()">Add Turbo</button>
+                <img src="semi.jpg" alt="Performance Tires" class="mod-image">
+                <button id="add-tires" class="mod-button" onclick="addTires()">Semi-Slick Tires</button>
+                <img src="weight.png" alt="Weight Reduction" class="mod-image">
+                <button id="reduce-weight" class="mod-button" onclick="reduceWeight()">Weight Reduction</button>
+            </div>
+        </section>
+        
+        <!-- Educational Content Section -->
+        <section id="learn">
+            <h2>Tuning impacts</h2>
+            <p>Tuning can impact cars both positively and negatively, as there needs to be a balance between power and grip for a car to be fast. Simply having more power does not necessarily make a car faster, as too much power can reduce traction off the line, creating unnecessary wheelspin and causing it to lose to the same car with less power. Similarly, a car with a lot of grip but not enough power will not accelerate quickly enough to outpace competitors. Moreover, weight plays a significant role; more weight increases grip but requires more power to maintain speed. Conversely, less weight means reduced grip. Therefore, optimizing various aspects of tuning is crucial for creating the ideal drag car.</p>
+            <h2>Modification Basics</h2>
+            <!-- Modification Details -->
+            <h4>Performance modifications</h4>
+            <p>Turbochargers - Installing a turbocharger can significantly increase engine power by forcing more air, and consequently more fuel, into the combustion chamber.</p>
+            <p>Exhaust Systems - Upgrading to a high-performance exhaust system can improve exhaust flow, enhancing horsepower and torque.</p>
+            <p>Cold Air Intakes - A cold air intake system increases engine efficiency and power by drawing in cooler outside air, which is denser and contains more oxygen for combustion.</p>
+            <p>ECU Tuning - Remapping or tuning the Engine Control Unit (ECU) can optimize the engine's performance, including fuel delivery and ignition timing, for higher power output.</p>
+            <h4>Handling Modifications</h4>
+            <p>Suspension Upgrades - Enhancing the suspension system improves handling, stability, and cornering capabilities by reducing body roll and increasing tire contact with the road.</p>
+            <p>Performance Tires - Switching to performance tires improves grip and handling, allowing the car to accelerate faster and turn more sharply without losing traction.</p>
+            <p>Anti-roll Bars - Minimizes body roll during cornering for better stability and handling precision.</p>
+            <p>Performance Bushings - Increases suspension stiffness and steering response, reducing squirm under load.</p>
+        </section>
+    </main>
+
+    <footer>
+        <p>© 2024 Car Tuning Simulator</p>
+    </footer>
+
+    
+    <script src="script.js"></script>
+</body>
+</html>

@@ -1,0 +1,210 @@
+/* Base styles for body and html */
+html, body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    color: #333;
+    background: linear-gradient(to bottom, #f9f9f9 0%, #858585 100%);
+    width: 100%;
+    overflow-x: hidden;
+    scroll-behavior: smooth;
+}
+
+/* Styling for a specific section to highlight learning resources */
+#learn {
+    background-color: #4CAF50; /* Bright green for visibility */
+    color: white;
+    padding: 20px; /* Provides internal space */
+    border-radius: 8px; /* Rounds the corners of the section */
+    margin: 20px; /* External spacing */
+}
+
+/* General header styling */
+header {
+    background: #333;
+    color: white;
+    padding: 10px 20px;
+    text-align: center;
+}
+
+/* Navigation styles */
+nav ul {
+    list-style: none; /* Removes default list styling */
+    padding: 0;
+}
+
+nav ul li {
+    display: inline; /* Displays list items inline */
+    margin-right: 20px; /* Right margin for spacing between items */
+}
+
+nav ul li a {
+    color: white; /* Text color for links */
+    text-decoration: none; /* Removes underline from links */
+}
+
+/* Main content area styling */
+main {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    min-height: 100vh; /* Full view height */
+}
+
+/* Logo image styling */
+.logo {
+    height: 75px; /* Fixed height for consistency */
+}
+
+/* Additional center-aligned text sections */
+#home, #select-car h2 {
+    text-align: center;
+}
+
+/* Footer styling */
+footer {
+    text-align: center;
+    padding: 20px;
+    background: #333;
+    color: white;
+}
+
+/* Styling for car stats section */
+#car-and-stats {
+    display: flex;
+    align-items: center; /* Vertical alignment */
+    justify-content: center; /* Horizontal alignment */
+    gap: 20px; /* Space between elements */
+}
+
+/* Container for statistical bars */
+#stat-bar-container {
+    padding: 10px;
+    margin-right: 20px; /* Right margin for spacing */
+    background: #eee; /* Light gray background */
+    border-radius: 8px; /* Rounded corners */
+    width: 200px; /* Fixed width */
+}
+
+/* Statistic labels styling */
+.stat {
+    margin-bottom: 10px; /* Space below each stat */
+}
+
+/* Styling for bars representing stats */
+.bar {
+    height: 10px; /* Fixed height for all bars */
+    background-color: #ccc; /* Gray color */
+    transition: width 0.5s ease-in-out; /* Smooth transition for width change */
+    max-width: 100%; /* Maximum width constraint */
+    width: 0%; /* Initial width set to zero */
+}
+
+/* Specific color styling for various bars */
+#hp-bar, #weight-bar, #grip-bar {
+    background-color: #4CAF50; /* Green color for visibility */
+}
+
+/* Fade effect for transitions */
+.fade-effect {
+    opacity: 0;
+    transition: opacity 0.5s ease-in-out;
+}
+
+/* Car selector styling */
+#car-selector {
+    position: relative;
+    text-align: center;
+    margin: 20px;
+}
+
+/* Car image styling */
+#car-image {
+    display: block;
+    margin: 20px auto;
+    max-width: 100%;
+    height: auto;
+    border: 5px solid #4CAF50; /* Green border */
+    border-radius: 10px; /* Rounded corners */
+}
+
+/* Customization section styling */
+#customize {
+    display: flex;
+    justify-content: center;
+    align-items: flex-start; /* Align at the top */
+    flex-wrap: wrap;
+    margin: 20px 0;
+    width: 100%; /* Full width */
+}
+
+/* Individual modification option styling */
+.modification {
+    margin: 10px; /* Space around each option */
+    text-align: center; /* Center content */
+    height: 150px; /* Fixed height */
+    padding: 10px; /* Padding inside each option */
+}
+
+/* Modification image styling */
+.mod-image {
+    width: 150px;
+    border: 2px solid black;
+    margin-bottom: 10px;
+}
+
+/* Styling for buttons within modifications */
+.mod-button {
+    background-color: #4CAF50;
+    color: white;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    width: 150px; /* Ensure alignment with image above */
+}
+
+.mod-button:hover {
+    background-color: #367c39; /* Darker green on hover */
+}
+
+/* Responsive adjustments for smaller screens */
+@media (max-width: 768px) {
+    #customize {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .modification {
+        margin: 10px 0; /* Vertical spacing only */
+    }
+}
+
+/* General button styling for navigation */
+button {
+    border: none;
+    background-color: transparent;
+    color: black;
+    font-size: 24px;
+    cursor: pointer;
+    padding: 10px;
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+}
+
+/* Positioning for car navigation buttons */
+#prev-car {
+    left: 10px;
+}
+
+#next-car {
+    right: 10px;
+}
+
+/* Positioning and spacing for specific modification buttons */
+button#add-turbo, button#add-tires, button#reduce-weight {
+    position: static; /* Reset to default positioning */
+    margin-top: 10px; /* Space above each button */
+}
